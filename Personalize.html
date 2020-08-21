@@ -31,7 +31,6 @@
 		<a href="https://jeeten10.github.io/MiniWebsite/Personalize.html"><span style="margin-right:0.5cm;color:black;border-style:outset;background-color:blue">Personalized Stock</span></a>
 		<a href="https://jeeten10.github.io/MiniWebsite/Feedback.html"><span style="margin-right:0.5cm;color:black;border-style:outset;background-color:blue">Feedback</span></a></center>
 		<h1><center><u><b>Personalized stock option for you at present</b></u></center></h1>
-		<p>Best stock for you would be</p>
 		<label>What is your Risk taking capacity?</label>
 		<input type="radio" class="check" onchange="trigger(this)" name="ra" value="low">
   		<label for="low">Low</label><br>
@@ -41,6 +40,7 @@
   		<label for="high">High</label><br>
           <h1 id="display"></h1>
 		<script >
+		<p>Best stock for you would be</p>
             function trigger(radioButton) {
                 if ("low" == radioButton.value) {
                     display.innerHTML = "Reliance Industries Ltd.";
