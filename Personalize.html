@@ -34,7 +34,6 @@
   		<label for="medium">Medium</label><br>
   		<input type="radio" class="check" name="ra" onchange="trigger(this)"  value="high">
   		<label for="high">High</label><br>
-        <input type="button" value="Submit" onclick="mytrigger()">
           <h1 id="display"></h1>
 		<script >
             function trigger(radioButton) {
@@ -45,11 +44,7 @@
                 } else if ("high" == radioButton.value) {
                     display.innerHTML = "ur high";
                 }
-                }
-                function mytrigger() {
-                      var display = document.querySelector("#display");
-                      display.innerHTML ="submission success"
-                    }
+	    }
         </script> 
 </body>
 </html>
