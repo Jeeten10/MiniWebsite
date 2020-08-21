@@ -16,7 +16,7 @@
 		.Pages{
 			font-family:cursive;
 			font-size: 30px;
-			font-color: Black;
+			/* //font-color: Black; */
 		}
 	</style>
 	<div><span style="font-family:cursive;font-size:25px;border-style:groove;background-color:grey;"><b>Stock Traders India</b></span></div>
@@ -28,18 +28,28 @@
 		<a href="https://jeeten10.github.io/MiniWebsite/Feedback.html"><span style="margin-right:0.5cm;color:black;border-style:outset;background-color:blue">Feedback</span></a></center>
 		<h1><center><u><b>Personalized stock option for you at present</b></u></center></h1>
 		<label>What is your Risk taking capacity?</label>
-		<input type="radio" id="low" name="ra" value="low">
+		<input type="radio" class="check" onchange="trigger(this)" name="ra" value="low">
   		<label for="low">Low</label><br>
-  		<input type="radio" id="medium" name="ra" value="medium">
+  		<input type="radio" class="check" onchange="trigger(this)" name="ra" value="medium">
   		<label for="medium">Medium</label><br>
-  		<input type="radio" id="high" name="ra" value="high">
+  		<input type="radio" class="check" name="ra" onchange="trigger(this)"  value="high">
   		<label for="high">High</label><br>
-  		<input type="button" value="Submit" onclick="msg();">
-		<script type="text/javascript">  
-		      function msg(){
-		      		document.write('<p>Reliance Industries Ltd<br>Click Refresh to return to the previous page.</p>');
-        			}
-		</script>  
-		
+        <input type="button" value="Submit" onclick="mytrigger()">
+          <h1 id="display"></h1>
+		<script >
+            function trigger(radioButton) {
+                if ("low" == radioButton.value) {
+                    display.innerHTML = "ur low";
+                } else if ("medium" == radioButton.value) {
+                    display.innerHTML = "ur medium";
+                } else if ("high" == radioButton.value) {
+                    display.innerHTML = "ur high";
+                }
+                }
+                function mytrigger() {
+                      var display = document.querySelector("#display");
+                      display.innerHTML ="submission success"
+                    }
+        </script> 
 </body>
 </html>
